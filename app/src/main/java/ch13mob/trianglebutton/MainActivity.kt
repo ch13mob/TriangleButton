@@ -12,22 +12,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        vTriangles.setOnTouchListener { view, event ->
-            var isUpperTriangle = false
-
-            view?.let {
-                val touchedX = event.x
-                val touchedY = event.y
-                isUpperTriangle = (it.height - touchedY) * it.width > touchedX * it.height
-            }
-
+        vTriangles.clickListener = { isUpperTriangle ->
             Toast.makeText(
                 this@MainActivity,
                 "isUpperTriangle: $isUpperTriangle",
-                Toast.LENGTH_LONG
+                Toast.LENGTH_SHORT
             ).show()
-
-            return@setOnTouchListener isUpperTriangle
         }
     }
 

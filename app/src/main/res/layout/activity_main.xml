@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <View
+    <ch13mob.trianglebutton.TrianglesView
         android:id="@+id/vTriangles"
         android:layout_width="match_parent"
         android:layout_height="300dp"
